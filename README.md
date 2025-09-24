@@ -23,5 +23,5 @@ All implemented algorithms function correctly, giving the right outputs.
 Correct binary representations (32 bit) of the number for one's and two's complement.
 
 ## Notes
-- Updated the way to get input from the text file, used strtok(NULL, " ") instead of hardcoding the length of the string the pointer has to be at. By placing NULL as the first parameter, it continues tokenizing the same string from where it left off.
+- Updated the way to get input from the text file, used strtok(NULL, " ") instead of hardcoding the length of the string that the pointer has to be at. By placing NULL as the first parameter, it continues tokenizing the same string from where it left off.
 - New methods learned: memmove(), memcpy(), and atoi().
