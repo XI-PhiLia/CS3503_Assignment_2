@@ -50,7 +50,7 @@ void oct_to_hex(const char *oct, char *out) {
         memcpy(group, &hex_temp[i], 4);
         group[4] = '\0';
         int n = strtol(group, NULL, 2); // converts string to base 2 (binary)
-        if(n >= 10) {
+        if(n >= 10) { 
             out[index++] = 'A' + (n-10);
         }
         else {
@@ -81,10 +81,10 @@ void hex_to_bin(const char *hex, char *out) {
     for (int i = 0; hex[i] != '\0'; i++) {
         char bit = toupper(hex[i]); // sets all letters to uppercase to also handle lowercase
         if (bit >= '0' && bit <= '9') {
-            strcat(out, table[bit - '0']); // 0-9 in binary
+            strcat(out, table[bit - '0']); // concatenates the 0-9 in binary
         } 
         else if (bit >= 'A' && bit <= 'F') {
-            strcat(out, table[bit - 'A' + 10]); // 10-15 in binary
+            strcat(out, table[bit - 'A' + 10]); // concatenates the 10-15 in binary
         } 
         else { // letter that is not A-F
             printf("Not a hexadecimal."); 

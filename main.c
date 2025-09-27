@@ -6,9 +6,7 @@
 #include "convert.c"
 
 int main() {
-    // buffer used for checking print_tables for correct format
-    char t_buffer[100] = {'\0'}; 
-    FILE * file = fopen ("a2_test.txt", "r") ; // read a1 test file
+    FILE * file = fopen ("a2_test.txt", "r") ; // read a2 test file
     if ( file == NULL ) {
         printf (" Error : Could not open file \n") ;
         return 1;
@@ -95,9 +93,9 @@ int main() {
         }
         // invalid test input
         else {
-            printf("Input invalid.");
+            printf("Test input invalid.");
         }
     }
     fclose ( file ) ; 
-    printf("\nSummary: %d/%d test passed", pass, t_count); // prints passed/total tests
+    printf("\nSummary: %d/%d test passed", pass, t_count); // prints summary of passed/total tests
 }
